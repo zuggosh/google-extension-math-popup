@@ -1,0 +1,18 @@
+{
+  // Required
+  "manifest_version": 2,
+  "name": "Math helper",
+  "version": "1.0",
+
+  // Recommended
+ "description": "helper to students :)",
+ "icons": {
+   "40": "images/math.gif"
+ },
+
+ "browser_action": {
+   "default_title": "Math helper",
+   "default_icon": "images/icon.png",
+   "default_popup": "popup.html"
+ }
+}

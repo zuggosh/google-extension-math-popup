@@ -1,0 +1,30 @@
+body {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.block__title {
+  text-align: center;
+  font-size: 18px;
+  border-bottom: 1px solid #f7a300;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-weight: normal;
+}
+
+.block__input {
+  width: 80%;
+  height: 30px;
+  margin-bottom: 5px;
+  padding: 0 10px;
+  border: 1px solid #9e9e9e;
+  font-size: 15px;
+}

@@ -76,51 +76,129 @@
       <li class="item">
         <a id="triangle" class="item__link" href="javascript:void(0);">Triangle</a>
         <ul id="triangleList" class="elemListAdd">
+
           <li class="itemAdd">
             <div class="block">
-              <h5 class="block__title">Area of the ellipsee</h5>
-              <input class="block__input" id="ellipseeLargeR" type="number" name="" value="" placeholder="semimajor axis">
-              <input class="block__input" id="ellipseeSmallR" type="number" name="" value="" placeholder="minor axis">
-              <input class="block__input" id="resultEllipsee" type="" name="" value="" >
+              <h5 class="block__title">Area of the versatile triangle</h5>
+              <input class="block__input" id="versatileTriangleHeight" type="number" name="" value="" placeholder="height of the triangle">
+              <input class="block__input" id="versatileTriangleBase" type="number" name="" value="" placeholder="base">
+              <input class="block__input" id="resultVersatileTriangle" type="" name="" value="" >
             </div>
           </li>
 
-          <li class="itemAdd"></li>
+          <li class="itemAdd">
+            <div class="block">
+              <h5 class="block__title">Area of a right triangle</h5>
+              <input class="block__input" id="rightTriangleLeg1" type="number" name="" value="" placeholder="triangle legs">
+              <input class="block__input" id="rightTriangleLeg2" type="number" name="" value="" placeholder="triangle legs">
+              <input class="block__input" id="resultRightTriangle" type="" name="" value="" >
+            </div>
+          </li>
+
+          <!-- <li class="itemAdd">
+            <div class="block">
+              <h5 class="block__title">Area of the triangle according to Heron's formula</h5>
+              <input class="block__input" id="HeronA" type="number" name="" value="" placeholder="Sides of the triangle A">
+              <input class="block__input" id="HeronB" type="number" name="" value="" placeholder="Sides of the triangle B">
+              <input class="block__input" id="HeronC" type="number" name="" value="" placeholder="Sides of the triangle C">
+              <input class="block__input" id="resultHeron" type="" name="" value="" >
+            </div>
+          </li> -->
+
+          <li class="itemAdd">
+            <div class="block">
+              <h5 class="block__title">Area of an isosceles triangle</h5>
+              <input class="block__input" id="isoscelesTriangleBase" type="number" name="" value="" placeholder="base">
+              <input class="block__input" id="isoscelesTriangleHeight" type="number" name="" value="" placeholder="height">
+              <input class="block__input" id="resultIsoscelesTriangle" type="" name="" value="" >
+            </div>
+          </li>
+
+          <li class="itemAdd">
+            <div class="block">
+              <h5 class="block__title">Area of an equilateral triangle</h5>
+              <input class="block__input" id="equilateralTriangleSide" type="number" name="" value="" placeholder="triangle side">
+              <input class="block__input" id="equilateralTriangleHeight" type="number" name="" value="" placeholder="height">
+              <input class="block__input" id="resultEquilateralTriangle" type="" name="" value="" >
+            </div>
+          </li>
+
         </ul>
       </li>
 
       <li class="item">
-        <a id="square" class="item__link" href="javascript:void(0);">Square</a>
+        <a id="square" class="item__link" href="javascript:void(0);">Polygons</a>
         <ul id="squareList" class="elemListAdd">
-          <li class="itemAdd"></li>
+
+          <li class="itemAdd">
+            <div class="block">
+              <h5 class="block__title">Square of a square</h5>
+              <input class="block__input" id="squareSide" type="number" name="" value="" placeholder="side of a square">
+              <input class="block__input" id="resultSquare" type="" name="" value="" >
+            </div>
+          </li>
+
+          <li class="itemAdd">
+            <div class="block">
+              <h5 class="block__title">Area of the rectangle</h5>
+              <input class="block__input" id="rectangleLength" type="number" placeholder="length of a rectangle">
+              <input class="block__input" id="rectangWidth" type="number" placeholder="width of a rectangle">
+              <input class="block__input" id="resultrectang" type="" name="" value="" >
+            </div>
+          </li>
+
+          <li class="itemAdd">
+            <div class="block">
+              <h5 class="block__title">Parallelogram area through sides and angles</h5>
+              <input class="block__input" id="parallelogramSideA" type="number" placeholder="side of a parallelogram A">
+              <input class="block__input" id="parallelogramSideB" type="number" placeholder="side of a parallelogram B">
+              <input class="block__input" id="parallelogramAngles" type="number" placeholder="angles of a parallelogram">
+              <input class="block__input" id="resultParallelogram" type="" name="" value="" >
+            </div>
+          </li>
+
+          <li class="itemAdd">
+            <div class="block">
+              <h5 class="block__title">Diamond Square</h5>
+              <input class="block__input" id="diamondLarge" type="number" placeholder="large diagonal">
+              <input class="block__input" id="diamondSmaller" type="number" placeholder="smaller diagonal">
+              <input class="block__input" id="resultDiamond" type="" name="" value="" >
+            </div>
+          </li>
+
+          <li class="itemAdd">
+            <div class="block">
+              <h5 class="block__title">Trapezoid area through the bases and height</h5>
+              <input class="block__input" id="trapezoidA" type="number" placeholder="bottom base">
+              <input class="block__input" id="trapezoidB" type="number" placeholder="upper base">
+              <input class="block__input" id="trapezoidHeight" type="number" placeholder="height">
+              <input class="block__input" id="resultTrapezoid" type="" name="" value="">
+            </div>
+          </li>
+
+          <li class="itemAdd">
+            <div class="block">
+              <h5 class="block__title">Area of a regular polygon</h5>
+              <input class="block__input" id="regularPolygonSide" type="number" placeholder="polygon side">
+              <input class="block__input" id="regularPolygonNumber" type="number" placeholder="number of sides">
+              <input class="block__input" id="resultRegularPolygon" type="" name="" value="">
+            </div>
+          </li>
+
         </ul>
       </li>
 
-
+<!--
       <li class="item">
         <a class="item__link" href="javascript:void(0);">some else</a>
         <ul class="elemListAdd">
           <li class="itemAdd"></li>
         </ul>
-      </li>
+      </li> -->
 
     </ul>
   </div>
 
-  <!--
-  <div class="block">
-    <h5 class="block__title">Area of Equilateral Triangle</h5>
-    <input class="block__input" id="heightTriangle" type="number" name="" value="" placeholder="height">
-    <input class="block__input" id="heightBase" type="number" name="" value="" placeholder="вase length">
-    <input class="block__input" id="resultTriangle" type="" name="" value="" >
-  </div>
-
-  <div class="block">
-    <h5 class="block__title">Area of a right triangle</h5>
-    <input class="block__input" id="ellipseeLargeR" type="number" name="" value="" placeholder="triangle legs">
-    <input class="block__input" id="ellipseeSmallR" type="number" name="" value="" placeholder="triangle legs">
-    <input class="block__input" id="resultEllipsee" type="" name="" value="" >
-  </div> -->
 
 </body>
 <script src="js/jquery.min.js"></script>

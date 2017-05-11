@@ -3,6 +3,27 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
       /////* Swiching class active*/////
 
+      /* need Code refactoring !!! */
+  $('#circle').click(function(){
+    $('.elemListAdd').removeClass('active');
+    $('#circleList').addClass('active');
+  });
+
+  $('#triangle').click(function(){
+    $('.elemListAdd').removeClass('active');
+    $('#triangleList').addClass('active');
+  });
+
+  $('#square').click(function(){
+    $('.elemListAdd').removeClass('active');
+    $('#squareList').addClass('active');
+  });
+
+
+
+
+
+
 
       //////* Circle  *///////
 

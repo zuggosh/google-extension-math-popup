@@ -1,3 +1,4 @@
+"use strict";
 
   var mathCalc = new mathCalcArea();
 

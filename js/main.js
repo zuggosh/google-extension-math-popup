@@ -1,20 +1,20 @@
-document.addEventListener("DOMContentLoaded", function(event) {
-  console.log("dom ready");
+
+  var mathCalc = new mathCalcArea();
 
       /////* Swiching class active*/////
 
       /* need Code refactoring !!! */
-  $('#circle').click(function(){
+  $('#circle').click(() => {
     $('.elemListAdd').removeClass('active');
     $('#circleList').addClass('active');
   });
 
-  $('#triangle').click(function(){
+  $('#triangle').click(() => {
     $('.elemListAdd').removeClass('active');
     $('#triangleList').addClass('active');
   });
 
-  $('#square').click(function(){
+  $('#square').click(() => {
     $('.elemListAdd').removeClass('active');
     $('#squareList').addClass('active');
   });
@@ -22,50 +22,50 @@ document.addEventListener("DOMContentLoaded", function(event) {
       //////* Circle  *///////
 
   /*Area of a Circle*/
-  $('#data').keyup(function(){
+  $('#data').keyup( () => {
     let value = $('#data').val();
-    let result = mathCalcArea().circle.calcAreaOfCircle(value);
+    let result = mathCalc.circle.calcAreaOfCircle(value);
     $('#result').val(result);
   });
 
   /*Area of sector of a circle*/
-  $('#sectorR, #sectorAlfa').keyup(function(){
+  $('#sectorR, #sectorAlfa').keyup(() => {
     let valueSectorR = $('#sectorR').val();
     let valueSectorAlfa = $('#sectorAlfa').val();
-    let result = mathCalcArea().circle.calcAreaOfSectorOfCircle(valueSectorR, valueSectorAlfa);
+    let result = mathCalc.circle.calcAreaOfSectorOfCircle(valueSectorR, valueSectorAlfa);
     $('#resultSector').val(result);
   });
 
   /*Ring area*/
-  $('#ringRadiusLarge, #ringRadiusSmall').keyup(function(){
+  $('#ringRadiusLarge, #ringRadiusSmall').keyup(() => {
     let valueRingRadiusLarge = $('#ringRadiusLarge').val();
     let valueRingRadiusSmall = $('#ringRadiusSmall').val();
-    let result = mathCalcArea().circle.calcRingArea(valueRingRadiusLarge, valueRingRadiusSmall);
+    let result = mathCalc.circle.calcRingArea(valueRingRadiusLarge, valueRingRadiusSmall);
     $('#resultRingArea').val(result);
   });
 
   /* Circle segment area */
-  $('#CircleSegmentRadius, #CircleSegmentAngle').keyup(function(){
+  $('#CircleSegmentRadius, #CircleSegmentAngle').keyup(() => {
     let valueCircleSegmentRadius = $('#CircleSegmentRadius').val();
     let valueCircleSegmentAngle = $('#CircleSegmentAngle').val();
-    let result = mathCalcArea().circle.calcCircleSegmentArea(valueCircleSegmentRadius, valueCircleSegmentAngle);
+    let result = mathCalc.circle.calcCircleSegmentArea(valueCircleSegmentRadius, valueCircleSegmentAngle);
     $('#resultCircleSegment').val(result);
   });
 
   /*Ring sector area*/
-  $('#ringSectorLarge, #ringSectorSmall, #ringSectorAngle').keyup(function(){
+  $('#ringSectorLarge, #ringSectorSmall, #ringSectorAngle').keyup(() => {
     let valueRingSectorLarge = $('#ringSectorLarge').val();
     let valueRingSectorSmall = $('#ringSectorSmall').val();
     let valueRingSectorAngle = $('#ringSectorAngle').val();
-    let result = mathCalcArea().circle.calcRingSectorArea(valueRingSectorLarge, valueRingSectorSmall, valueRingSectorAngle);
+    let result = mathCalc.circle.calcRingSectorArea(valueRingSectorLarge, valueRingSectorSmall, valueRingSectorAngle);
     $('#resultRingSector').val(result);
   });
 
   /*Area of the ellips*/
-  $('#ellipseeLargeR, #ellipseeSmallR').keyup(function(){
+  $('#ellipseeLargeR, #ellipseeSmallR').keyup(() => {
     let valueEllipseSmallR = $('#ellipseeSmallR').val();
     let valueEllipseLargeR = $('#ellipseeLargeR').val();
-    let result = mathCalcArea().circle.calcAreaOfTheEllips(valueEllipseSmallR, valueEllipseLargeR);
+    let result = mathCalc.circle.calcAreaOfTheEllips(valueEllipseSmallR, valueEllipseLargeR);
     $('#resultEllipsee').val(result);
   });
 
@@ -73,86 +73,86 @@ document.addEventListener("DOMContentLoaded", function(event) {
       //////* Triangle  *///////
 
   /*Area of the versatile triangle*/
-  $('#versatileTriangleHeight, #versatileTriangleBase').keyup(function(){
+  $('#versatileTriangleHeight, #versatileTriangleBase').keyup(() => {
     let valueVersatileTriangleHeight = $('#versatileTriangleHeight').val();
     let valueVersatileTriangleBase = $('#versatileTriangleBase').val();
-    let result = mathCalcArea().triangle.calcAreaOfVersatileTriangle(valueVersatileTriangleHeight, valueVersatileTriangleBase);
+    let result = mathCalc.triangle.calcAreaOfVersatileTriangle(valueVersatileTriangleHeight, valueVersatileTriangleBase);
     $('#resultVersatileTriangle').val(result);
   });
 
   /*Area of a right triangle*/
-  $('#rightTriangleLeg1, #rightTriangleLeg2').keyup(function(){
+  $('#rightTriangleLeg1, #rightTriangleLeg2').keyup(() => {
     let valueRightTriangleLeg1 = $('#rightTriangleLeg1').val();
     let valueRightTriangleLeg2 = $('#rightTriangleLeg2').val();
-    let result = mathCalcArea().triangle.calcAreaOfVersatileTriangle(valueRightTriangleLeg1, valueRightTriangleLeg2);
+    let result = mathCalc.triangle.calcAreaOfVersatileTriangle(valueRightTriangleLeg1, valueRightTriangleLeg2);
     $('#resultRightTriangle').val(result);
   });
 
   /* Area of an isosceles triangle */
-  $('#isoscelesTriangleBase, #isoscelesTriangleHeight').keyup(function(){
+  $('#isoscelesTriangleBase, #isoscelesTriangleHeight').keyup(() => {
     let valueIsoscelesTriangleBase = $('#isoscelesTriangleBase').val();
     let valueIsoscelesTriangleHeight = $('#isoscelesTriangleHeight').val();
-    let result = mathCalcArea().triangle.calcAreaOfIsoscelesTriangle(valueIsoscelesTriangleBase, valueIsoscelesTriangleHeight);
+    let result = mathCalc.triangle.calcAreaOfIsoscelesTriangle(valueIsoscelesTriangleBase, valueIsoscelesTriangleHeight);
     $('#resultIsoscelesTriangle').val(result);
   });
 
   /* Area of an equilateral triangle */
-  $('#equilateralTriangleSide, #equilateralTriangleHeight').keyup(function(){
+  $('#equilateralTriangleSide, #equilateralTriangleHeight').keyup(() => {
     let valueEquilateralTriangleSide = $('#equilateralTriangleSide').val();
     let valueEquilateralTriangleHeight = $('#equilateralTriangleHeight').val();
-    let result = mathCalcArea().triangle.calcAreaOfEquilateralTriangle(valueEquilateralTriangleSide, valueEquilateralTriangleHeight);
+    let result = mathCalc.triangle.calcAreaOfEquilateralTriangle(valueEquilateralTriangleSide, valueEquilateralTriangleHeight);
     $('#resultEquilateralTriangle').val(result);
   });
 
         //////* Polygons  *///////
 
   /*Square of a square*/
-  $('#squareSide').keyup(function(){
+  $('#squareSide').keyup(() => {
     let valueSquareSide = $('#squareSide').val();
-    let result = mathCalcArea().polygons.calcSquareOfSquare(valueSquareSide);
+    let result = mathCalc.polygons.calcSquareOfSquare(valueSquareSide);
     $('#resultSquare').val(result);
   });
 
   /*Area of the rectangle*/
-  $('#rectangleLength, #rectangWidth').keyup(function(){
+  $('#rectangleLength, #rectangWidth').keyup(() => {
     let valueRectangleLength = $('#rectangleLength').val();
     let valueRectangWidth = $('#rectangWidth').val();
-    let result = mathCalcArea().polygons.calcAreaOfRectangle(valueRectangleLength, valueRectangWidth);
+    let result = mathCalc.polygons.calcAreaOfRectangle(valueRectangleLength, valueRectangWidth);
     $('#resultrectang').val(result);
   });
 
   /*Parallelogram area through sides and angles*/
 
-  $('#parallelogramSideA, #parallelogramSideB, #parallelogramAngles').keyup(function(){
+  $('#parallelogramSideA, #parallelogramSideB, #parallelogramAngles').keyup(() => {
     let valueParallelogramSideA = $('#parallelogramSideA').val();
     let valueParallelogramSideB = $('#parallelogramSideB').val();
     let valueParallelogramAngles = $('#parallelogramAngles').val();
-    let result = mathCalcArea().polygons.calcParallelogramAreaThroughSidesAndAngles(valueParallelogramSideA, valueParallelogramSideB, valueParallelogramAngles);
+    let result = mathCalc.polygons.calcParallelogramAreaThroughSidesAndAngles(valueParallelogramSideA, valueParallelogramSideB, valueParallelogramAngles);
     $('#resultParallelogram').val(result);
   });
 
   /*Diamond Square*/
-  $('#diamondLarge, #diamondSmaller').keyup(function(){
+  $('#diamondLarge, #diamondSmaller').keyup(() => {
     let valueDiamondLarge = Number($('#diamondLarge').val());
     let valueDiamondSmaller = Number($('#diamondSmaller').val());
-    let result = mathCalcArea().polygons.calcDiamondSquare(valueDiamondLarge, valueDiamondSmaller);
+    let result = mathCalc.polygons.calcDiamondSquare(valueDiamondLarge, valueDiamondSmaller);
     $('#resultDiamond').val(result);
   });
 
   /*Trapezoid area through the bases and height*/
-  $('#trapezoidA, #trapezoidB, #trapezoidHeight').keyup(function(){
+  $('#trapezoidA, #trapezoidB, #trapezoidHeight').keyup(() => {
     let valueTrapezoidA = Number($('#trapezoidA').val());
     let valueTrapezoidB = Number($('#trapezoidB').val());
     let valueTrapezoidHeight = Number($('#trapezoidHeight').val());
-    let result = mathCalcArea().polygons.calcTrapezoidAreaThroughBasesAndHeight(valueTrapezoidA, valueTrapezoidB, valueTrapezoidHeight);
+    let result = mathCalc.polygons.calcTrapezoidAreaThroughBasesAndHeight(valueTrapezoidA, valueTrapezoidB, valueTrapezoidHeight);
     $('#resultTrapezoid').val(result);
   });
 
   /*Area of a regular polygon*/
-  $('#regularPolygonSide, #regularPolygonNumber').keyup(function(){
+  $('#regularPolygonSide, #regularPolygonNumber').keyup(() => {
     let valueRegularPolygonSide = Number($('#regularPolygonSide').val());
     let valueRegularPolygonNumber = Number($('#regularPolygonNumber').val());
-    let result =  mathCalcArea().polygons.calcAreaOfRegularPolygon(valueRegularPolygonSide, valueRegularPolygonNumber);
+    let result =  mathCalc.polygons.calcAreaOfRegularPolygon(valueRegularPolygonSide, valueRegularPolygonNumber);
     $('#resultRegularPolygon').val(result);
   });
 
@@ -160,57 +160,71 @@ document.addEventListener("DOMContentLoaded", function(event) {
       /* circle */
     function calcAreaOfCircle (val){
       return val ** 2 * Math.PI;
-    };
+    }
+
     function calcAreaOfSectorOfCircle(sectorR, sectorAlfa){
       return (Math.PI * sectorAlfa * ( sectorR ** 2))/360;
-    };
+    }
+
     function calcRingArea(ringRadiusLarge, ringRadiusSmall){
       return Math.PI * ( (ringRadiusLarge ** 2) - (ringRadiusSmall**2) );
-    };
+    }
+
     function calcCircleSegmentArea(CircleSegmentRadius, CircleSegmentAngle){
       return 0.5 * (CircleSegmentRadius**2) * Math.PI * CircleSegmentAngle /180 - Math.sin(CircleSegmentAngle);
     }
+
     function calcRingSectorArea(ringSectorLarge, ringSectorSmall, ringSectorAngle){
       return Math.PI * ringSectorAngle / 360 * ( (ringSectorLarge**2) - (ringSectorSmall**2) );
-    };
+    }
+
     function calcAreaOfTheEllips(ellipseeSmallR, ellipseeLargeR){
       return ellipseeSmallR * ellipseeLargeR * Math.PI;
-    };
+    }
+
        /* triangle */
     function calcAreaOfVersatileTriangle(versatileTriangleHeight, versatileTriangleBase){
       return 0.5 * versatileTriangleHeight * versatileTriangleBase;
-    };
+    }
+
     function calcAreaOfIsoscelesTriangle(isoscelesTriangleBase, isoscelesTriangleHeight){
       return 0.5 * isoscelesTriangleBase * isoscelesTriangleHeight;
-    };
+    }
+
     function calcAreaOfEquilateralTriangle(equilateralTriangleSide, equilateralTriangleHeight){
       return 0.5 * equilateralTriangleSide * equilateralTriangleHeight;
-    };
+    }
+
       /* polygons */
     function calcSquareOfSquare(squareSide){
       return squareSide ** 2;
-    };
+    }
+
     function calcAreaOfRectangle(rectangleLength, rectangWidth){
       return rectangleLength * rectangWidth;
-    };
+    }
+
     function calcParallelogramAreaThroughSidesAndAngles(parallelogramSideA, parallelogramSideB, parallelogramAngles){
       return parallelogramSideA * parallelogramSideB * Math.sin(parallelogramAngles);
-    };
+    }
+
     function calcDiamondSquare(diamondLarge, diamondSmaller){
       return (diamondLarge * diamondSmaller) / 2;
-    };
+    }
 
     function calcTrapezoidAreaThroughBasesAndHeight(trapezoidA, trapezoidB, trapezoidHeight){
       let length = trapezoidA + trapezoidB;
       let area = length / 2 * trapezoidHeight;
       return area;
-    };
+    }
+
     function calcAreaOfRegularPolygon(regularPolygonSide, regularPolygonNumber){
       let squa = regularPolygonSide * regularPolygonNumber ** 2;
       let tan = 4 * Math.tan( 180 / regularPolygonNumber );
       let area = squa / tan;
       return area;
-    };
+    }
+
     return{
       circle: {
         calcAreaOfCircle: calcAreaOfCircle,
@@ -234,5 +248,4 @@ document.addEventListener("DOMContentLoaded", function(event) {
         calcAreaOfRegularPolygon: calcAreaOfRegularPolygon
       }
     }
-  };
-});
+  }
